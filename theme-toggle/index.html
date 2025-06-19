@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mandeep | Developer Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f2f2f2;
+      color: #222;
+      transition: 0.4s;
+    }
+
+    .dark-mode {
+      background-color: #121212;
+      color: #eee;
+    }
+
+    header {
+      padding: 30px 0;
+      text-align: center;
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      color: white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    .icon {
+      font-size: 32px;
+      margin: 10px 0;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .toggle-btn {
+      background-color: white;
+      color: #333;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border-radius: 25px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: 0.3s ease;
+    }
+
+    .dark-mode .toggle-btn {
+      background-color: #333;
+      color: #fff;
+    }
+
+    .section {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 25px;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+      transition: 0.3s ease;
+    }
+
+    .dark-mode .section {
+      background-color: #1f1f1f;
+      color: #ddd;
+      box-shadow: 0 8px 20px rgba(255, 255, 255, 0.05);
+    }
+
+    h2 {
+      margin-bottom: 15px;
+      font-size: 1.5rem;
+    }
+
+    ul {
+      list-style-type: "✅ ";
+      padding-left: 20px;
+      text-align: left;
+    }
+
+    li {
+      margin: 8px 0;
+    }
+
+    footer {
+      margin-top: 50px;
+      text-align: center;
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+
+    .dark-mode footer {
+      background-color: #181818;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Mandeep Kaur</h1>
+    <div class="icon" id="themeIcon">🌞</div>
+    <button class="toggle-btn" id="Togglebtn">Switch to Dark Mode</button>
+  </header>
+
+  <div class="section">
+    <h2>👩‍💻 About Me</h2>
+    <p>Hi! I’m Mandeep, a frontend developer passionate about crafting beautiful, responsive user interfaces using HTML, CSS, JavaScript, and React.</p>
+  </div>
+
+  <div class="section">
+    <h2>🛠️ Skills</h2>
+    <ul>
+      <li>HTML5, CSS3, JavaScript</li>
+      <li>React (in progress)</li>
+      <li>Firebase, Git & GitHub</li>
+      <li>Responsive Design & DOM Manipulation</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>📫 Contact</h2>
+    <p>Email: mandeep@example.com</p>
+    <p>Instagram: @mandeep.codes</p>
+  </div>
+
+  <footer>
+    <p>Made with 💖 by Mandeep | 2025</p>
+  </footer>
+
+  <script>
+    const Togglebtn = document.getElementById("Togglebtn");
+    const themeIcon = document.getElementById("themeIcon");
+
+    if (localStorage.getItem("theme") === "dark") {
+      document.body.classList.add("dark-mode");
+      Togglebtn.innerText = "Switch to Light Mode";
+      themeIcon.innerText = "🌚";
+    }
+
+    Togglebtn.addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+      const isDark = document.body.classList.contains("dark-mode");
+
+      Togglebtn.innerText = isDark ? "Switch to Light Mode" : "Switch to Dark Mode";
+      themeIcon.innerText = isDark ? "🌚" : "🌞";
+      localStorage.setItem("theme", isDark ? "dark" : "light");
+    });
+  </script>
+
+</body>
+</html>
