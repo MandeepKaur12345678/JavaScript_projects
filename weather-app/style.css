@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(135deg, #fcd6f6, #d1e8ff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.container {
+  background: white;
+  padding: 60px 50px;
+  border-radius: 30px;
+  max-width: 700px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(12px);
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+h1 {
+  font-size: 40px;
+  color: #ff6fa1;
+  margin-bottom: 10px;
+}
+
+.tagline {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.search-box {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 35px;
+  justify-content: center;
+}
+
+input {
+  padding: 15px;
+  width: 70%;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  font-size: 18px;
+  outline: none;
+}
+
+button {
+  padding: 15px 25px;
+  background-color: #ff7db9;
+  border: none;
+  color: white;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #ff4f9a;
+}
+
+.card {
+  background-color: #fef5ff;
+  border-radius: 20px;
+  padding: 40px 30px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+  font-size: 18px;
+  color: #333;
+  line-height: 2;
+}
+
+.card h2 {
+  margin-bottom: 15px;
+  color: #444;
+  font-size: 28px;
+}
+
+.card p {
+  margin: 10px 0;
+  font-size: 20px;
+}
